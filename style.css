@@ -1,0 +1,258 @@
+/* Reset dan Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #0b3d91;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Section Umum */
+section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+section h2 {
+  margin-bottom: 1rem;
+  color: #0b3d91;
+}
+
+/* About */
+#about img {
+  max-width: 140px;
+  border-radius: 100px;
+  display: block;
+  margin: 0 auto 1rem;
+  transition: transform 0.3s ease;
+}
+
+#about img:hover {
+  transform: scale(1.05);
+
+}
+
+/* List */
+ul {
+  padding-left: 1.2rem;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Project Links */
+#projects a {
+  color: #0b3d91;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+#projects a:hover {
+  text-decoration: underline;
+  color: #0a2e6b;
+  transform: translateX(3px);
+}
+
+
+/* Kontak */
+#contact a {
+  color: #333;
+  text-decoration: none;
+}
+#contact a:hover {
+  color: #0b3d91;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #eee;
+  color: #555;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+/* Animasi muncul dari bawah */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeInUp 1s ease-out both;
+}
+p {
+  margin-bottom: 1rem;
+}
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  #about img {
+    max-width: 100px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+/* Tombol switch dark mode */
+#toggle-dark-mode {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #0b3d91;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+#toggle-dark-mode:hover {
+  background-color: #09418c;
+}
+
+/* Tema gelap */
+body.dark {
+  background-color: #1c1c1c;
+  color: #f5f5f5;
+}
+
+body.dark section {
+  background-color: #2a2a2a;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark header {
+  background-color: #111;
+}
+
+body.dark a {
+  color: #88ccff;
+}
+#toggle-dark-mode {
+  animation: scaleIn 0.5s ease-in-out;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #fff;
+  width: 0;
+  animation: typing 1.5s steps(20, end) forwards;
+  display: inline-block;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: white; }
+}
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Tombol dark mode */
+#toggle-dark-mode {
+  animation: scaleIn 0.5s ease-in-out;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ==================== */
+/* TYPEWRITER EFFECT ✍️ */
+/* ==================== */
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #fff;
+  width: 0;
+  animation: typing 2.5s steps(30, end) forwards;
+  display: inline-block;
+}
+
+/* Efek blink saat ngetik */
+.typing-cursor {
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: white; }
+}
